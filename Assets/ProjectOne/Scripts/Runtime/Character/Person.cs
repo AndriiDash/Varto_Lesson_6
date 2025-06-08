@@ -1,27 +1,24 @@
+using System;
 using UnityEngine;
 
 namespace Runtime.Character
 {
     public class Person : MonoBehaviour
     {
-    public int health;
-    private int armor;
-
-    void TakeDamage(int value)
-    {
-        if(value < 0 || value > 100) return;
-        health -= value;
-    }
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
-        {
+      public MeshRenderer meshRenderer;
+        public Transform myTransform;
+        public Rigidbody rigidbody;
+        public string name = "Undefined";
+        public int age;
+        public int health;
         
-        }
-
-        // Update is called once per frame
-        void Update()
+       
+        private void Start()
         {
-        
+           //  myTransform.position = new Vector3(6, 7, 4);
+           //  meshRenderer = GetComponent<MeshRenderer>();
+           //  meshRenderer.enabled = false;
+           // rigidbody.useGravity = false;
         }
     }
 }
