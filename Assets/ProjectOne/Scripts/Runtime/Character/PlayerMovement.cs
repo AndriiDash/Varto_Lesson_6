@@ -4,9 +4,9 @@ namespace Runtime.Character
 {
     public class PlayerMovement : MonoBehaviour
     {
-        private float horizontalInput;
-        private float verticalInput;
-        private float turnSpeed = 10f;
+        public float horizontalInput;
+        public float verticalInput;
+        public float turnSpeed = 10f;
 
         void Update()
         {
