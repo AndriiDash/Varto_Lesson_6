@@ -1,10 +1,11 @@
 using UnityEngine;
 
-
-    public class Person : MonoBehaviour
+namespace HomeWork7.Script.Runtime.Characters
+{
+    public abstract class Person : MonoBehaviour
     {
         [SerializeField] private string name;
-        [SerializeField] private int health;
+        [SerializeField] protected int health;
 
         private void Start()
         {
@@ -40,8 +41,12 @@ using UnityEngine;
             get { return health; }
         }
 
+        protected abstract void TakeDamage(int damageValue);
+        
+
         protected virtual void ShowStat()
         {
             Debug.Log($"Name={Name}");
         }
     }
+}

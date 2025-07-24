@@ -1,5 +1,7 @@
 using UnityEngine;
 
+namespace HomeWork7.Script.Runtime.Characters
+{
     public class Player : Person
     {
         public int experience;
@@ -9,6 +11,12 @@ using UnityEngine;
             ShowStat();
         }
 
+        protected override void TakeDamage(int damageValue)
+        {
+            Health -= damageValue;
+            Debug.Log($"My name is {Name}: After hitting with force: {damageValue}, I have: health {Health}");
+        }
+
         public int Experience => experience;
 
         protected override void ShowStat()
@@ -16,4 +24,5 @@ using UnityEngine;
             Debug.Log($"Name={Name} Experience={experience}");
         }
     }
+}
 
