@@ -41,7 +41,7 @@ namespace HomeWork7.Script.Runtime.Characters
             get { return health; }
         }
 
-        protected abstract void TakeDamage(int damageValue);
+        public abstract void TakeDamage(int damageValue);
         
 
         protected virtual void ShowStat()
